@@ -15,8 +15,10 @@ builds/chamrosh: ${OBJS}
 	@${CC} ${FLAGS} -I include $< -o $@
 	@echo "[$@] ----- built"
 
-
 clean:
 	@for file in $$(find . -type f -name "*.o"); do (echo [$$file] "----- has been removed") ; done 
 	@find . -name "*.o" -type f -delete
 	@if [ -f builds/chamrosh ]; then rm -rf builds/chamrosh ; echo "[builds/chamrosh] ----- has been removed" ; else echo "no chamrosh file to remove"; fi
+
+
+.PHONY = clean
