@@ -4,6 +4,7 @@
 
 
 void arg_parse(int argc, char *argv[]);
+int command_parse(int argc, char *argv[]);
 
 
 
